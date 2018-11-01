@@ -8,4 +8,5 @@
 
 require('model.php');
 $requete = getposts();
+//test
 require('indexview.php');

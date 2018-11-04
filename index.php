@@ -1,12 +1,23 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Yonathan
- * Date: 29/10/2018
- * Time: 16:40
- */
 
-require('model.php');
-$requete = getposts();
-//test
-require('indexview.php');
+   require('controller.php');
+
+   if (isset($_GET['action']))
+   {
+
+       if ($_GET['action'] == 'home')
+       {
+           listPost();
+       } else if ($_GET['action'] == 'post')
+       {
+           post();
+       }
+
+   }
+   else {
+          listPost();
+   }
+
+
+
+
